@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+  position: relative;
+}
+
+#form {
+  border-style: ridge;
+  padding: 60px;
+  border-color: greenyellow;
+}
+
+#main-img {
+  position: absolute;
+  width: 29px;
+  top: 11px;
+  left: 535px;
+}

@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Grammar Checker",
+  "description": "Use To check spelling and gramatical mistake",
+  "version": "1.0",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": "icon.png",
+    "default_title": "Grammar Check",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://docs.google.com/*",
+        "https://www.google.com/*",
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": ["contentscript.js"],
+      "css": ["contentscript.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icon.png", "cross.png", "submit.png","progressBar.gif"],
+      "matches": ["https://docs.google.com/*", "https://www.google.com/*","<all_urls>"]
+    }
+  ],
+  "options_page": "options/options.html",
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

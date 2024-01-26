@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <div id="form">
+      <img src="../icon.png" id="main-img" />
+      <label for="option-text"><b> Paste your Key here</b></label>
+      <br />
+      <input type="text" id="options-key" />
+      <br />
+      <br />
+      <button id="submit-key">Submit</button>
+      <span style="position: relative; display: none" id="processing-bar"
+        ><img src="../progressBar.gif" style="width: 20px; position: absolute"
+      /></span>
+      <div id="key-set" style="display: none; margin-top: 12px">
+        <b>Your Current key is</b>
+        <span style="position: relative; top: 2px">********************</span>
+        <img src="../right.png" width="21px" />
+      </div>
+      <div
+        id="key-not-set"
+        style="position: relative; display: none; margin-top: 14px"
+      >
+        <b>key is invalid</b>
+        <img
+          src="../red-cross.jpg"
+          style="width: 26px; position: absolute; top: -1px"
+        />
+      </div>
+    </div>
+  </body>
+  <script src="options.js"></script>
+</html>
